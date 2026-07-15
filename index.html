@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+    <head><style>
+        body{
+            background-color: #e0f7fa;
+            background-size: cover;
+            margin: 0;
+            padding: 20px;
+            
+        }
+          h1{
+            color: #6a5acd;
+            margin: 1.5rem;
+            text-align: center;
+          }
+    
+    
+          
+
+       fieldset { 
+        border: 2px solid  #5e35b1;
+        border-radius: 10px;
+        background-color: white;
+        padding: 1.5rem;
+        width: 300px;
+        margin: 10px auto;
+        box-shadow: 0 4px 8px rgba(0, 0,0, 1);
+       }
+       legend{
+        color: #5e35b1;
+        font-weight: 8px;
+        padding: 10px;
+       }
+       input{
+        border: none;
+        
+       }
+label{
+    font-size: 15px;
+    display: block;
+}
+p{color: rgb(104, 0, 0);
+margin-top: 0;}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="password"]{
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-sizing: border-box;
+    
+}
+
+
+
+
+
+
+       input[type="submit"]{
+        background-color: #6a5acd;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s;
+       }
+       input[type="reset"]{
+        background-color: #f44336;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+        input[ type="checkbox"]{
+            background-color: aliceblue;
+            color: white;
+            text-align: left;
+
+        
+        }
+
+
+        #modal
+
+        {
+            display: none;
+            background-color: #fff;
+            position: fixed;
+            padding: 20px;
+            top: 1%;
+            left: 40%;
+            border-radius: 8px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0,0, 3);
+            z-index: 1000;
+        }
+        #modal button{
+          background-color: #5e35b1;
+          color: white;
+          border: none;
+          padding: 8px 16px;
+          cursor: pointer;
+        }
+
+
+    </style>
+    
+        
+<title>
+    forms 
+</title>
+    </head>
+    <body>
+        <h1>Enter your information</h1>
+        <form onsubmit="return validateForm()">
+            <fieldset>
+                <legend>USER PERSONAL INFORMATION</legend>
+                <div>
+             <div class="inputs" >
+                    <label>FIRST NAME:</label>
+            <input type="text" id="name" placeholder="first name" oninput="username()" required>
+            <p id="user_out"></p></div>
+            <div class="inputs" >
+            <label>LAST NAME: </label>
+            <input type="text" id="lastname" placeholder="second name" oninput="last()" required>
+            <p id="output"></p></div>
+            <div class="inputs" >
+            <label>PHONE NUMBER: </label>
+            <input type="tel" id="number" placeholder="phone number" oninput="contact()" required>
+            <p id="rock"></p></div>
+            <div class="inputs" >
+            <label>EMAIL :</label>
+            <input type="email"  id="email" required oninput="emaili()" placeholder="enter your email">
+            <p id="close"></p></div>
+            <div class="inputs" >
+            <label for="password">PASSWORD :</label>
+            <input type="password" id="password" placeholder="password" oninput="pass()" required>
+            <p id="table"></p>
+            </div>
+             <input type="radio"  name="gender" value="male"/>male
+             <input type="radio"  name="gender" value="female"/>female<br><br>
+            </div>
+          
+
+
+        <p> Kindly select your favourite sports</p>
+        <input type="checkbox" name="sport1" value="Tennis">Tennis<br>
+        <input type="checkbox" name="sport2" value="Cricket">Cricket<br>
+        <input type="checkbox" name="sport3" value="Football">Football<br>
+        <input type="checkbox" name="sport4" value="Basketball">Basketball<br>
+        <input type="checkbox" name="sport5" value="Baseballl">Baseballl<br>
+        <input type="checkbox" name="sport6" value="Netball">Netball<br>
+          
+        <input type="submit">
+        <input type="button" value="Reset"  onclick="showResetModal()">  
+
+    </fieldset>
+</form>
+
+      <div id="modal">
+        <h2>CONFIRM RESET</h2>
+        <p>ARE YOU SURE YOU WANT TO DELETE </p>
+        <button type="button" onclick="subs()">YES</button>
+        <button type="button" onclick="cancel()">NO</button>
+      </div>
+    
+
+        <script src="assignment.js">
+            
+        </script>
+
+
+    </body>
+</html>
